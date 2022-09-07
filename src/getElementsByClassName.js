@@ -25,13 +25,14 @@ var getElementsByClassName = function(className, documentElement) {
   // otherwise
   }
 
+  // do a for loop for every childNodes of documentelement
+    // childNode has three nodes type --- text/ children/comment nodes, only children can have classname so we need to check if e
+    // if current childNode contains className
+      // call getElementsByClassName(current element)
   for (var i = 0; i < documentElement.childNodes.length; i++) {
-    result.concat(getElementsByClassName(className, documentElement.childNodes[i]));
+    result = result.concat(getElementsByClassName(className, documentElement.childNodes[i]));
   }
-    // do a for loop for every childNodes of documentelement
-       // childNode has three nodes type --- text/ children/comment nodes, only children can have classname so we need to check if e
-      // if current childNode contains className
-        // call getElementsByClassName(current element)
+
 
   // return result
   console.log(result);
