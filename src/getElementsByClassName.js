@@ -35,7 +35,6 @@ var getElementsByClassName = function(className, documentElement) {
 
 
   // return result
-  console.log(result);
   return result;
 };
 
